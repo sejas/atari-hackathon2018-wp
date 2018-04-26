@@ -1,0 +1,57 @@
+{
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "johnpbloch/wordpress": ">=4.9",
+        "wpackagist-plugin/akismet": "*",
+        "wpackagist-plugin/cookie-notice": "*",
+        "wpackagist-plugin/contact-form-7": "*",
+        "wpackagist-plugin/coming-soon": "*",
+        "wpackagist-plugin/advanced-custom-fields": "*",
+        "wpackagist-plugin/wp-crontrol": "*",
+        "wpackagist-plugin/cache-enabler": "*",
+        "wpackagist-plugin/wpcustom-category-image": "*",
+        "wpackagist-plugin/stream": "*",
+        "wpackagist-plugin/heartbeat-control": "*",
+        "wpackagist-theme/twentyseventeen": "*",
+        "wpackagist-theme/blankslate": "*"
+    },
+    "require-dev": {
+        "wpackagist-plugin/debug-bar": "*",
+        "wpackagist-plugin/debug-bar-action-hooks": "*",
+        "wpackagist-plugin/debug-bar-console": "*",
+        "wpackagist-plugin/debug-bar-constants": "*",
+        "wpackagist-plugin/debug-bar-cron": "*",
+        "wpackagist-plugin/debug-bar-rewrite-rules": "*",
+        "wpackagist-plugin/debug-bar-toggle": "*",
+        "wpackagist-plugin/debug-bar-list-dependencies": "*",
+        "wpackagist-plugin/monster-widget": "*",
+        "wpackagist-plugin/regenerate-thumbnails": "*",
+        "wpackagist-plugin/simply-show-ids": "*",
+        "wpackagist-plugin/theme-check": "*",
+        "wpackagist-plugin/user-switching": "*",
+        "wpackagist-plugin/log-deprecated-notices": "*",
+        "wpackagist-plugin/transients-manager": "*",
+        "wpackagist-plugin/duplicate-post": "*",
+        "wpackagist-plugin/developer": "*",
+        "wpackagist-plugin/show-current-template": "*",
+        "wpackagist-plugin/wp-rollback": "*"
+    },
+    "extra": {
+        "wordpress-install-dir": "wp"
+    },
+    "scripts": {
+        "post-root-package-instal": [
+        ],
+        "post-install-cmd": [
+        ],
+        "post-update-cmd": [
+            "@php post-install.php"
+        ]
+    }
+}
