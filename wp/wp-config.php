@@ -18,18 +18,19 @@
  * @package WordPress
  */
 
-// ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define('DB_NAME', 'atari-hackathon');
 
-/** MySQL database username */
-define('DB_USER', 'root');
+if ('/Users/macbookpro/Documents/proyectos/' == $_SERVER["DOCUMENT_ROOT"]) {
+  define('DB_NAME', 'atari-hackathon');
+  define('DB_USER', 'root');
+  define('DB_PASSWORD', 'root!root!');
+  define('DB_HOST', '127.0.0.1:8889');
+}else{
+  define('DB_NAME', 'db4283421_pwa');
+  define('DB_USER', 'u4283421_pwa');
+  define('DB_PASSWORD', 'aHbHkA3f');
+  define('DB_HOST', 'mysql377int.srv-hostalia.com');
+}
 
-/** MySQL database password */
-define('DB_PASSWORD', 'root!root!');
-
-/** MySQL hostname */
-define('DB_HOST', '127.0.0.1:8889');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8mb4');

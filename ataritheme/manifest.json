@@ -10,8 +10,12 @@
   "orientation": "natural",
   "icons": [
     {
-      "src": "https://gifted-minsky-2f1d62.netlify.com/./img/icon.png",
+      "src": "img/icon-atari-192.png",
       "sizes": "192x192"
+    },
+    {
+      "src": "img/icon-atari-512.png",
+      "sizes": "512x512"
     }
   ]
 }

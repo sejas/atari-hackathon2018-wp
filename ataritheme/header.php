@@ -12,9 +12,21 @@
 <body <?php body_class(); ?>>
 <script>
     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker
-            .register('<?php echo ATARIURI; ?>/js/sw.js')
-            .then(function () { console.log("Service Worker Registered"); });
+        // navigator.serviceWorker
+            // .register('<?php echo ATARIURI; ?>/js/sw.js')
+            // .then(function () { console.log("Service Worker Registered"); });
+
+        //Add this below content to your HTML page, or add the js file to your page at the very top to register sercie worker
+        if (navigator.serviceWorker.controller) {
+          console.log('[PWA Builder] active service worker found, no need to register')
+        } else {
+          //Register the ServiceWorker
+          navigator.serviceWorker.register('pwabuilder-sw.js', {
+            scope: './'
+          }).then(function(reg) {
+            console.log('Service worker has been registered for scope:'+ reg.scope);
+          });
+        }
     }
 </script>
 <div id="page" class="site">
