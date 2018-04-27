@@ -4,3 +4,8 @@ function my_theme_enqueue_styles() {
     wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
 
 }
+
+
+
+$stylesheet_directory_uri = get_stylesheet_directory_uri();
+define('ATARIURI', $stylesheet_directory_uri);
